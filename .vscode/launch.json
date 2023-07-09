@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\end-game.js",
+            "program": "${workspaceFolder}\\Quiz-of-my-things.js",
             
             "console": "externalTerminal"
         }
