@@ -10,13 +10,13 @@ var score = 0;
 // play function
 
 function play(question, answer) {
-  var userAnswer = readlineSync.question(question);
+  var userAnswer = readlineSync.question(question + "\nYour Answer: ");
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     console.log("You are right!");
     score = score + 1;
   } else {
-    console.log("You are wrong!");
+    console.log("You are wrong! The correct answer is: " + answer);
   }
 
   console.log("Current Score: ", score);
@@ -61,7 +61,7 @@ var questions = [
 for (var i=0; i<questions.length; i++) {
     var currentQuestion = questions[i];
     play(currentQuestion.question, currentQuestion.answer)
-    }
+}
 
 // final score
 
@@ -86,4 +86,4 @@ console.log("Check out the high scores, if you should be there ping me and I'll 
 for (var i=0; i<highScores.length; i++) {
     var currentScore = highScores[i];
     console.log(currentScore.name, " : ", currentScore.score);
-    }
+}
